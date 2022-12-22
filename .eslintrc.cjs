@@ -10,7 +10,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb/hooks',
-    'prettier', // must be last
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -18,7 +17,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
   rules: {},
   settings: {
     'import/resolver': {
@@ -26,3 +25,18 @@ module.exports = {
     },
   },
 };
+
+// module.exports = {
+//   env: {
+//     browser: true,
+//     es2021: true,
+//   },
+//   extends: ['plugin:react/recommended', 'standard-with-typescript'],
+//   overrides: [],
+//   parserOptions: {
+//     ecmaVersion: 'latest',
+//     sourceType: 'module',
+//   },
+//   plugins: ['react'],
+//   rules: {},
+// };
