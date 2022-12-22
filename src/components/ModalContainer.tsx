@@ -5,10 +5,6 @@ type TestModalProps = {
 };
 
 const ModalContainer = ({ setShowModal }: TestModalProps) => {
-  const foo = 'foo';
-
-  const testArray = ['one', 'two'];
-
   const modalRoot = document.getElementById('modal-root');
   return (
     modalRoot &&
