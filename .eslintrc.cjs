@@ -11,6 +11,8 @@ module.exports = {
     'react-app',
     'react-app/jest',
     'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
