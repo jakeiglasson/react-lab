@@ -8,7 +8,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'airbnb',
+    'airbnb/hooks',
+    'prettier', // must be last
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
