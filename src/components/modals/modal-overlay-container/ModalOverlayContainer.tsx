@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { TestModalProps } from './types';
+import { ModalOverlayContainerProps } from './types';
 import styles from './styles.module.scss';
-import ModalContainer from '../modal-container/ModalContainer';
 
-const ModalOverlayContainer = ({ setShowModal, children }: TestModalProps) => {
+const ModalOverlayContainer = ({ setShowModal, children }: ModalOverlayContainerProps) => {
   const modalRoot = document.getElementById('modal-root');
 
   const handleClickOffModal = (event: MouseEvent) => {
@@ -30,7 +29,7 @@ const ModalOverlayContainer = ({ setShowModal, children }: TestModalProps) => {
 
   return createPortal(
     <div id="modal-overlay-container" className={styles.container}>
-      <ModalContainer setShowModal={setShowModal}>{children}</ModalContainer>
+      {children}
     </div>,
     modalRoot
   );
