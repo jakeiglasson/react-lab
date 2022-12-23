@@ -6,16 +6,14 @@ import styles from './styles.module.scss';
 const ModalOverlayContainer = ({ setShowModal, children }: ModalOverlayContainerProps) => {
   const modalRoot = document.getElementById('modal-root');
 
-  const handleClickOffModal = (event: MouseEvent) => {
-    if (event.target && (event.target as HTMLElement).id === 'modal-overlay-container') {
-      // If it is not, close the modal
-      setShowModal(false);
-    }
-  };
-
   useEffect(() => {
     // Add an event listener to the 'modal-root' div that listens for clicks
     // When clicked close the modal
+    const handleClickOffModal = (event: MouseEvent) => {
+      if (event.target && (event.target as HTMLElement).id === 'modal-overlay-container') {
+        setShowModal(false);
+      }
+    };
     modalRoot && modalRoot.addEventListener('click', handleClickOffModal);
     return () => {
       modalRoot && modalRoot.removeEventListener('click', handleClickOffModal);
@@ -23,7 +21,7 @@ const ModalOverlayContainer = ({ setShowModal, children }: ModalOverlayContainer
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!modalRoot) {
-    alert('No modal root to attach modal to');
+    console.warn('No div with id "modal-root" to attach modal to'); // eslint-disable-line no-console
     return null;
   }
 
