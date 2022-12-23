@@ -2,7 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
 import ListComponent from './components/list-component/ListComponent';
-import ModalContainer from './components/modal-container/ModalContainer';
+import TestModal from './components/modals/TestModal/TestModal';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,7 +44,7 @@ function App() {
         />
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-      {showModal && <ModalContainer setShowModal={v => setShowModal(v)} />}
+      {showModal && <TestModal setShowModal={setShowModal} />}
     </div>
   );
 }
