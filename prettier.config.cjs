@@ -14,16 +14,16 @@ module.exports = {
   useTabs: false,
   // Remaining Defaults
   bracketSameLine: false,
-  embeddedLanguageFormatting: 'auto',
-  endOfLine: 'lf',
-  filepath: undefined,
-  htmlWhitespaceSensitivity: 'css',
-  insertPragma: false,
-  parser: undefined,
-  rangeEnd: Infinity,
-  requirePragma: false,
-  singleAttributePerLine: false,
-  vueIndentScriptAndStyle: false,
+  // embeddedLanguageFormatting: 'auto',
+  // endOfLine: 'lf',
+  // filepath: undefined,
+  // htmlWhitespaceSensitivity: 'css',
+  // insertPragma: false,
+  // parser: undefined,
+  // rangeEnd: Infinity,
+  // requirePragma: false,
+  // singleAttributePerLine: false,
+  // vueIndentScriptAndStyle: false,
 };
 
 // All defaults

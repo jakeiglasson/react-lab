@@ -6,12 +6,12 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'react-app',
     'react-app/jest',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
     'prettier',
   ],
   overrides: [],
@@ -22,5 +22,9 @@ module.exports = {
     // project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
-  rules: {},
+  rules: {
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-console': 'error',
+  },
 };
